@@ -22,6 +22,7 @@ public class Exercise09 {
 		} else if(selectNo == 2) {
 			System.out.println("학생수>");
 			
+			
 		} else if(selectNo == 3) {
 		
 		} else if(selectNo == 4) {
