@@ -2,13 +2,13 @@ package hello.common;
 
 public class ArrayExample {
 	public static void main(String[] args) {
-		int a=10, b=20, c=30;
+		int a = 10, b = 20, c = 30;
 		int sum = a + b + c;
-		int[] intAry = {10, 20, 30, 40, 50, 60 };
-		String[] strAry = {"Nice", "Good", "Hello" };
+		int[] intAry = { 10, 20, 30, 40, 50, 60 };
+		String[] strAry = { "Nice", "Good", "Hello" };
 		System.out.println(intAry[0]);
 		System.out.println(strAry[0]);
-		for(int i=0; i<6; i++) {
+		for (int i = 0; i < 6; i++) {
 			System.out.println(intAry[i]);
 		}
 		System.out.println("strAry의 크기: " + strAry.length);
@@ -16,7 +16,7 @@ public class ArrayExample {
 		for (int i = 0; i < strAry.length; i++) {
 			System.out.println(strAry[i]);
 		}
-		
+
 		///////
 		int[] aAry = new int[5];
 		for (int i = 0; i < aAry.length; i++) {
@@ -24,13 +24,13 @@ public class ArrayExample {
 		}
 		for (int i = 0; i < aAry.length; i++)
 			System.out.println(aAry[i]);
-	sum = 0;
-	for(int i=0; i<aAry.length; i++) {
-		sum += aAry[i];
-	}
-	System.out.println("aAry 배열의 합: " + sum);
-	//////////
+		sum = 0;
+		for (int i = 0; i < aAry.length; i++) {
+			sum += aAry[i];
+		}
+		System.out.println("aAry 배열의 합: " + sum);
+		//////////
 
 	}
-	
+
 }
