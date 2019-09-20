@@ -1,15 +1,9 @@
 package classes;
 
-import java.util.Scanner;
-
 public class CalcExample {
 	public static void main(String[] args) {
-		Calculator cal = new Calculator();
-		Scanner sc = new Scanner(System.in);
-		
-		int a, b;
-		a = sc.nextInt();
-		b = sc.nextInt();
-		cal.execute(a, b);
+		Calculator.plus(23.5, 10.2);
+		Calculator.minus(23.5, 10.2);
 	}
 }
+
