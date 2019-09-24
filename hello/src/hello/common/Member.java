@@ -2,15 +2,6 @@ package hello.common;
 
 public class Member {
 	private String name;
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-
 	private String id;
 	private String password;
 	private int age;
@@ -21,7 +12,13 @@ public class Member {
 		this.id = id;
 	}
 	
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getId() {
 		return id;
 	}

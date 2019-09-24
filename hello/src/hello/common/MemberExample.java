@@ -21,9 +21,11 @@ public class MemberExample {
 	System.out.println("조회할 id 입력");
 	String id = sc.nextLine();
 	for(int i=0; i<m.length; i++) {
-	if(m[i].getName().equals(name))
+	if(m[i].getName().equals(name)) {
 		System.out.println(m[i].getName()+""+m[i].getId());
 
 	}
 	}
+	}
 }
+

@@ -7,6 +7,10 @@ public class AccountExample {
 	private static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		Account acnt = new Account();
+		
+		
+		
 		boolean run = true;
 		while (run) {
 			System.out.println("--------------------------");
@@ -24,12 +28,12 @@ public class AccountExample {
 				withdraw();
 			} else if (menu == 5) {
 				run = false;
-				
+
 			}
 		}
 		System.out.println("프로그램 종료.");
 	}// end of main
-	// 계좌인스턴스 만드는 메소드
+		// 계좌인스턴스 만드는 메소드
 
 	public static void createAccount() {
 		System.out.println("createAccount()");
@@ -66,10 +70,10 @@ public class AccountExample {
 		String accntNo = sc.nextLine();
 		System.out.println("입금액:");
 		int accntBalance = sc.nextInt();
-		for(Account accnt : accountArray) {
-			if(accnt != null && accnt.getAno().equals(accntNo)) {
+		for (Account accnt : accountArray) {
+			if (accnt != null && accnt.getAno().equals(accntNo)) {
 				accnt.setBalance(accntBalance);
-				
+
 			}
 		}
 	}
@@ -81,13 +85,14 @@ public class AccountExample {
 		String accntNo = sc.nextLine();
 		System.out.println("출금액:");
 		int accntBalance = sc.nextInt();
-		for(Account accnt : accountArray) {
-			if(accnt != null && accnt.getAno().equals(accntNo)) {
-				accnt.setBalance(accntBalance);
-		
+		for (Account accnt : accountArray) {
+			if (accnt != null && accnt.getAno().equals(accntNo)) {
+				accnt.setBalance(-accntBalance);
+
 			}
+		}
 	}
-	}
+
 	public static Account findAccount(String ano) {
 		return null;
 	}
