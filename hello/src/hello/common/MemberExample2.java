@@ -79,17 +79,17 @@ public class MemberExample2 {
 				isId = true;
 				isPw = false;break;
 				}
-			}else {
-				isId = false;
-				isPw = false;
-				}	
-		}
-	
-		if(isId==true && isPw ==true)
+//			}else {
+//				isId = false;
+//				isPw = false;
+//				}	
+//		}
+//	
+		if(isId && isPw)
 			System.out.println("이름은:" + name + ", 나이는" + age);
-		else if(isId==true && isPw ==false)
+		else if(isId && !isPw)
 			System.out.println("비밀번호가 잘못됐습니다.");
-		else if(isId==false && isPw ==false)
+		else if(!isId && !isPw)
 			System.out.println("존재하지 않는 아이디입니다.");
 }
 }
