@@ -5,11 +5,11 @@ public class Tire {
 	int accumulatedRotation;//사용으로 인해 축적된 회전수.
 	String location;
 	
-	Tire(String location, int maxRotation){
+public Tire(String location, int maxRotation){
 		this.location = location;
 		this.maxRotation = maxRotation;
 	}
-	boolean roll() {
+	public boolean roll() {
 		accumulatedRotation++;//한번 돌때 마다 증감
 		if(maxRotation>accumulatedRotation) {
 			System.out.println(location + " 타이어 수명: " + (maxRotation-accumulatedRotation) + " 회");
