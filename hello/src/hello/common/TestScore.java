@@ -23,15 +23,16 @@ public class TestScore {
 				getNumList();
 			} else if (menu == 4) {
 				getSet();
-			}else if (menu == 5) {
+			} else if (menu == 5) {
 				getArray();
 			} else if (menu == 6) {
 				run = false;
 
+			}
+			System.out.println("프로그램 종료.");
 		}
-		System.out.println("프로그램 종료.");
-	 }
 	}
+
 	public static void createGrade() {
 		System.out.println("학번입력:");
 		int studentNo = sc.nextInt();
@@ -51,48 +52,51 @@ public class TestScore {
 			}
 		}
 	}
-	
-	public static void getList() {
 
-		
-		
-		
-		
+	public static void getList() {
+		System.out.println("전체조회");
 		for (Test t : testAry) {
-			if (t != null) {		
-				System.out.println("번호:"+t.getStudentNo()+","+"이름:"+t.getName()+","+
-						"국어점수:"+t.getGrade1()+","+"영어점수:"
-						+t.getGrade2()+","+"수학점수"+t.getGrade3());
+			if (t != null) {
+				System.out.println("번호:" + t.getStudentNo() + "," + "이름:" + t.getName() + "," + "국어점수:" + t.getGrade1()
+						+ "," + "영어점수:" + t.getGrade2() + "," + "수학점수" + t.getGrade3());
 			}
 		}
 	}
 
 	public static void getNumList() {
-		System.out.println("조회할 id입력:");
+		System.out.println("조회할 학번입력:");
 		int studentNo = sc.nextInt();
-		int sum[] = new int[3];
-		int avg[] = new int[3];
-		for(int i=0; i<studentNo.length;i++) {
-			sum[i] = grade1[i] + grade2[i] + grade3[i];
-			
-		}
+		double total = 0, avg = 0;
 		for (Test t : testAry) {
 			if (t != null) {
-			System.out.println("번호:"+t.getStudentNo()+","+"이름:"+t.getName()+","+
-					"국어점수:"+t.getGrade1()+","+"영어점수:"
-					+t.getGrade2()+","+"수학점수"+t.getGrade3()
-					+"총점:"+avg);
-			System.out.println("총점:" + sum);
-			System.out.println("평균:" + avg);
-
-			}		
+				if (t != null && t.getStudentNo().equals(studentNo)) {
+					total = t.getGrade1() + t.getGrade2() + t.getGrade3();
+					avg = total / 3;
+					System.out.println(t.getStudentNo() + "/" + t.getName() + "/" + t.getGrade1() + "/" + t.getGrade2()
+							+ "/" + t.getGrade3() + "/" + total + "/" + avg);
+				}
+			}
 		}
-	}}
-	
-	
+	}
 
-	
-		
-		
-		
-		
+	static void getSet() {
+		double total1 = 0, total2 = 0, total3 = 0;
+		int count = 0;
+		for (Test t : testAry) {
+			if (t != null) {
+				total1 += t.getGrade1();
+				total2 += t.getGrade2();
+				total3 += t.getGrade3();
+				count++;
+			}
+			System.out.println("통계");
+			System.out.println("국어 합계:" + total1 + ", 영어 합계:" + total2 + ", 수학 합계:" + total3 + ", 총 합계:"
+					+ (total1 + total2 + total3) + ", 평균:" + (total1 + total2 + total3) / (count * 3));
+		}
+	}
+
+	public static void getArray() {
+		System.out.println();
+
+	}
+}
