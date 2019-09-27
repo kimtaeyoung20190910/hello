@@ -69,11 +69,11 @@ public class TestScore {
 		double total = 0, avg = 0;
 		for (Test t : testAry) {
 			if (t != null) {
-				if (t != null && t.getStudentNo().equals(studentNo)) {
+				if (t != null && t.getStudentNo()==(studentNo)) {
 					total = t.getGrade1() + t.getGrade2() + t.getGrade3();
 					avg = total / 3;
-					System.out.println(t.getStudentNo() + "/" + t.getName() + "/" + t.getGrade1() + "/" + t.getGrade2()
-							+ "/" + t.getGrade3() + "/" + total + "/" + avg);
+					System.out.println(t.getStudentNo() + "," + t.getName() + "," + t.getGrade1() + "," + t.getGrade2()
+							+ "," + t.getGrade3() + "," + total + "," + avg);
 				}
 			}
 		}
