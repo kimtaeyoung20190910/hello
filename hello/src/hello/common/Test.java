@@ -7,12 +7,6 @@ public class Test {
 	int grade2;
 	int grade3;
 
-	public int getTot() {
-		return tot;
-	}
-	public void setTot(int tot) {
-		this.tot = tot;
-	}
 	public int getStudentNo() {
 		return studentNo;
 	}

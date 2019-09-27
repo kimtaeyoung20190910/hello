@@ -9,7 +9,6 @@ public class TestScore {
 	public static void main(String[] args) {
 		boolean run = true;
 		int menu = 0;
-		int sum,avg;
 		while (run) {
 			System.out.println("--------------------------------------------------");
 			System.out.println("1.등록 | 2.전체리스트| 3.번호조회 |4.통계 |5.정렬 |6.종료");
@@ -54,6 +53,9 @@ public class TestScore {
 	}
 	
 	public static void getList() {
+
+		
+		
 		
 		
 		for (Test t : testAry) {
@@ -68,16 +70,18 @@ public class TestScore {
 	public static void getNumList() {
 		System.out.println("조회할 id입력:");
 		int studentNo = sc.nextInt();
-
+		int sum[] = new int[3];
+		int avg[] = new int[3];
+		for(int i=0; i<studentNo.length;i++) {
+			sum[i] = grade1[i] + grade2[i] + grade3[i];
+			
+		}
 		for (Test t : testAry) {
 			if (t != null) {
 			System.out.println("번호:"+t.getStudentNo()+","+"이름:"+t.getName()+","+
 					"국어점수:"+t.getGrade1()+","+"영어점수:"
 					+t.getGrade2()+","+"수학점수"+t.getGrade3()
-					+"총점:"+);
-		}
-			int sum = 0;
-			double avg = 0.0;
+					+"총점:"+avg);
 			System.out.println("총점:" + sum);
 			System.out.println("평균:" + avg);
 
