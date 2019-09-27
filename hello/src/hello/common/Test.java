@@ -58,8 +58,4 @@ public class Test {
 		this.grade3 = grade3;
 	}
 
-	@Override
-	public String toString() {
-		return "[학번=" + studentNo + ", 이름=" + Name + ", 국어=" + grade1 + ", 영어=" + grade2 + ", 수학=" + grade3 + "]";
-	}
 }
