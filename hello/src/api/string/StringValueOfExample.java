@@ -5,3 +5,4 @@ public class StringValueOfExample {
 		String str1 = String
 	}
 }
+ 
