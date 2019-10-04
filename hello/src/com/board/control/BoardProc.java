@@ -1,5 +1,6 @@
 package com.board.control;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.board.impl.BoardServiceImpl;
@@ -8,13 +9,20 @@ import com.board.model.BoardService;
 
 public class BoardProc {
 	Scanner sc = new Scanner(System.in);
-	Board[] boardAry = new Board[10];
+//	Board[] boardAry = new Board[10];
+	List<Board> boardAry = new ArrayList<>() {
+
+	
+	BoardCollection service = new BoardCollectionImpl();
 	
 	public void execute() {
 		while (true) {
 			System.out.println("메뉴 선택하세요.");
 			System.out.println("1.작성2.단건조회3.전체조회4.종료");
-			int menu = sc.nextInt();sc.nextLine();
+			int menu = 0;
+			try {
+				menu = sc.nextInt();
+				sc.nextline();
 			if(menu==1) {
 				writeBoard();
 			}if(menu==2) {
