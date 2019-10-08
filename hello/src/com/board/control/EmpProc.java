@@ -80,7 +80,7 @@ public class EmpProc {
 		emp.setSalary(salary);
 		emp.setJobId(jobId);
 		service.insertEmployee(emp);
-		
+
 //		Board board = new Board(boardNo, title, contents, writer);
 //		BoardService servcie = new BoardServiceImpl();
 //		for (int i=0; i<boardAry.length; i++) {
@@ -95,7 +95,9 @@ public class EmpProc {
 	public void getBoard() {
 		System.out.println("한건조회.");
 		System.out.println("조회할 번호 입력.");
-		int boardNo = sc.nextInt();
+		int empNo = sc.nextInt();
+		Employee emp = service.getEmployee(empNo);
+		System.out.println(emp);
 //		BoardService service = new BoardServiceImpl();
 //		Board board = service.getBoard(boardNo, boardAry);
 //		for(int i=0; i<boardAry.length; i++) {
@@ -106,7 +108,7 @@ public class EmpProc {
 	}
 
 	public void getBoardList() {
-		System.out.println("전체글조회.");
+		System.out.println("전체직원조회.");
 		List<Employee> employees = service.getEmpList();
 		for (Employee employee : employees) {
 			System.out.println(employee);
@@ -120,6 +122,10 @@ public class EmpProc {
 	}
 
 	public void deleteBoard() {
-		System.out.println("삭제할 게시글 번호:");
+		System.out.println("삭제할 번호:");
+		System.out.println("조회할 번호 입력.");
+		int empNo = sc.nextInt();
+		service.deleteEmployee(empNo);
+		System.out.println("번호" + empNo);
 	}
 }
