@@ -26,13 +26,13 @@ public class EmpDAO {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, empNo);
 			rs = pstmt.executeQuery();
-			
+
 			CallableStatement cstmt = conn.prepareCall(sql1);
-			cstmt.registerOutParameter(1, java.sql.Types.VARCHAR); //String타입
+			cstmt.registerOutParameter(1, java.sql.Types.VARCHAR); // String타입
 			cstmt.setInt(2, empNo);
 			cstmt.execute();
 			String deptName = cstmt.getString(1);
-			
+
 			if (rs.next()) {
 				emp = new Employee();
 				emp.setEmployeeId(rs.getInt("employee_id"));
@@ -56,7 +56,6 @@ public class EmpDAO {
 		return emp;
 
 	}
-
 
 	public void insertEmpProc(Employee emp) {
 		conn = DAO.getConnect();
