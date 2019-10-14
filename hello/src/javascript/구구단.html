@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<style>
+.td {
+	border-width: 2px;
+}
+.tb1 {
+	border: 2px solid black;
+}
+</style>
+</head>
+<body>
+	<script>
+		document.write("<table class='tb1' rules='all'>");
+		for (x = 1; x < 10; x++) {
+			document.write("<tr><td class='td'>" + x + "단");
+			for (y = 1; y < 10; y++) {
+				document.write("<td>" + x + "*" + y + "=" + x * y);
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+td, th {
+	border: 1px solid lightgray;
+	border-collapse: collapse;
+	padding: 3px;
+}
+
+th {
+	background-color: lightgray;
+}
+
+.me1 {
+	font-weight: bold;
+	font-size: 17px;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<form>
+		<p class="me1">(주)예담직업전문학교 일반회원가입</p>
+		<table width="900" style="padding: 5px 0 5px 0;">
+			<li>이름, 생년월일, 성별, 이메일은 본인확인 및 교육확인을 위해 사용됩니다.<br> 신분증에 기재된
+				정보와 하나의 메일로 통일해서 적어주십시오.<br> <br>
+			<li>이름, 생년월일, 성별, 이메일과 훈련정보를 대조해 교육중이나 수료생의 경우<br> 마이페이지의
+				정보변경에서 바로 수료/수강생회원으로 전환이 가능합니다.<br> <br>
+			<li>회원가입후 마이페이지에서 회원탈퇴가 가능하며, 온라인상에서 정보는 보관되지 않습니다.
+			<tr>
+				<th>이 름</th>
+				<td><input type="text" name="mbname"></td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="mbid"> <span
+					style="font-weight: bold; font-size: 15px">ID는 영문자와 숫자만 사용할
+						수 있습니다.</span></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" name="mbpw"></td>
+			</tr>
+			<tr>
+				<th>비밀번호확인</th>
+				<td><input type="password" namme="mbrepw"></td>
+			</tr>
+			<tr>
+				<th>생년월일</th>
+				<td><select name="year" size="1" style="width: 60px">
+						<option value="">년도</option>
+						<option value='2'>1990</option>
+						<option value='3'>1991</option>
+						<option value='4'>1992</option>
+						<option value='5'>1993</option>
+						<option value='6'>1994</option>
+						<option value='7'>1995</option>
+						<option value='8'>1996</option>
+						<option value='9'>1997</option>
+						<option value='10'>1998</option>
+						<option value='11'>1999</option>
+						<option value='12'>2000</option>
+				</select> <select name="month" size="1" style="width: 60px">
+						<option value="">월</option>
+						<option value='2'>1</option>
+						<option value='3'>2</option>
+						<option value='4'>3</option>
+						<option value='5'>4</option>
+						<option value='6'>5</option>
+						<option value='7'>6</option>
+						<option value='8'>7</option>
+						<option value='9'>8</option>
+						<option value='10'>9</option>
+						<option value='11'>10</option>
+						<option value='12'>11</option>
+						<option value='13'>12</option>
+				</select> <select name="year" size="1" style="width: 60px">
+						<option value="">일</option>
+						<option value='2'>1</option>
+						<option value='3'>2</option>
+						<option value='4'>3</option>
+						<option value='5'>4</option>
+						<option value='6'>5</option>
+						<option value='7'>6</option>
+						<option value='8'>7</option>
+						<option value='9'>8</option>
+						<option value='10'>9</option>
+						<option value='11'>10</option>
+						<option value='12'>11</option>
+				</select> <span style="color: gray; font-size: 15px">*신분증에 기재된 성명,
+						생년월일, 성별을 입력해 주세요.</span</td>
+			</tr>
+			<tr>
+				<th>성 별</th>
+				<td class="tjdquf"><input type="radio" name="ck_man">남
+					<input type="radio" name="ck_woman">여</td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="text" name="mbemail" style="width: 300px">
+					<span style="color: gray; font-size: 15px">*본인확인 및 아이디/비번찾기에
+						사용됩니다.</span></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><select name="numf" size="1" style="width: 60px">
+						<option value="">선택</option>
+						<option value='2'>051</option>
+						<option value='3'>052</option>
+						<option value='4'>053</option>
+				</select>-<input type="text" name="numm" style="width: 50px">-<input
+					type="text" name="numl" style="width: 50px"> <span
+					style="color: blue; font-weight: bold">*전화 또는 휴대폰번호중 택 1은
+						필수사항입니다.</td>
+			</tr>
+			<tr>
+				<th>휴대폰번호</th>
+				<td><select name="pnumf" size="1" style="width: 60px">
+						<option value="">선택</option>
+						<option value='2'>010</option>
+						<option value='3'>011</option>
+						<option value='4'>019</option>
+				</select>-<input type="text" name="pnumm" style="width: 50px">-<input
+					type="text" name="pnuml" style="width: 50px"></td>
+			</tr>
+			<tr>
+				<th>우편번호</th>
+				<td><input type="text" name="dnvus" style="width: 90px">-<input
+					type="text" name="qjsgh" style="width: 90px"> <input
+					type="button" name="join" value="우편번호찾기"></td>
+			</tr>
+			<tr>
+				<th>주 소</th>
+				<td><input type="text" name="wnth" style="width: 500px"></td>
+			</tr>
+			<tr>
+				<th>상세주소</th>
+				<td><input type="text" name="tkdtpwnth" style="width: 500px"></td>
+			</tr>
+		</table>
+		<p align=center>
+			<input type="submit" name="join" value="일반회원가입">
+		</p>
+	</form>
+</body>
+</html>
