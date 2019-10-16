@@ -47,7 +47,7 @@ public class BoardDBProc {
 
 	public void updateBoard() {
 		System.out.println("변경할 글 번호:");
-		int boardNo = sc.nextInt();
+		int boardNo = sc.nextInt(); 
 		sc.nextLine();
 		System.out.println("제목변경:");
 		String title = sc.nextLine();

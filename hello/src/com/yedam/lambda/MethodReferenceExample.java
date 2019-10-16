@@ -20,7 +20,7 @@ public class MethodReferenceExample {
 		Calculator cal = new Calculator();
 		cal.instanceSum(a, b);
 
-		IntBinaryOperator oper;-
+		IntBinaryOperator oper;
 		oper = Calculator::staticSum;
 		result = oper.applyAsInt(a, b);
 		System.out.println("정적메소드참조: " + result);
